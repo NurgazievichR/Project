@@ -1,0 +1,103 @@
+{% extends 'include/base.html' %}
+
+{% block content %}
+	
+		<div id="content" class="site-content">
+			{% include 'include/entry_banner.html'   %}
+			<div id="primary" class="content-area">
+				<div class="container">
+					<div class="row gutters-60">
+						<div class="col-sm-12 col-12">
+							<main id="main" class="site-main">
+								<article id="post-252" class="post-252 page type-page status-publish hentry">
+
+
+									<div class="entry-content">
+										<div data-elementor-type="wp-post" data-elementor-id="252"
+											class="elementor elementor-252">
+											<div class="elementor-inner">
+												<div class="elementor-section-wrap">
+													<section
+														class="elementor-section elementor-top-section elementor-element elementor-element-953c4d2 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+														data-id="953c4d2" data-element_type="section"
+														data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+														<div class="elementor-container elementor-column-gap-default">
+															<div class="elementor-row">
+																<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9a260ce"
+																	data-id="9a260ce" data-element_type="column">
+																	<div
+																		class="elementor-column-wrap elementor-element-populated">
+																		<div class="elementor-widget-wrap">
+																			<div class="elementor-element elementor-element-2893444 elementor-widget elementor-widget-rt-recipe-categories"
+																				data-id="2893444"
+																				data-element_type="widget"
+																				data-widget_type="rt-recipe-categories.default">
+																				<div class="elementor-widget-container">
+
+<div class="row">
+{% for cat in category %}
+	<div class="ranna-recipe-category col-lg-4 col-md-6 col-sm-2 col-12 left ">
+			<a class="over-link"
+				href="{% url 'category_view' cat.url %}">
+				<div
+					class="category-box-layout1">
+					<figure
+						class="item-figure">
+						<a
+							href="{% url 'category_view' cat.url %}">
+							<img style="width: 620px; height:370px; object-fit:cover;"
+								{% if cat.image %}
+								src="{{ cat.image.url }}"
+								{% else %}
+								src = "https://radiustheme.com/demo/wordpress/themes/ranna/wp-content/uploads/2019/10/img_6.png"
+								{% endif %}
+								
+								class="attachment-ranna-size14 size-ranna-size14"
+								alt=""
+								loading="lazy" />
+						</a>
+					</figure>
+					<div
+						class="item-content">
+						<h3
+							class="item-title">
+							<a
+								href="{% url 'category_view' cat.url %}">{{cat.title}}</a>
+						</h3>
+						<span
+							class="sub-title">4
+							Recipes</span>
+					</div>
+				</div>
+			</a>
+		</div>
+{% endfor %}																			
+
+
+
+
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</main>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--#content-->
+
+		
+	{% endblock %}

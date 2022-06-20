@@ -1,0 +1,93 @@
+{% extends 'include/base.html' %}
+
+{% block content %}
+	
+		<div id="content" class="site-content">
+			{% include 'include/entry_banner.html'   %}
+			<div class="container">
+				<div class="row gutters-60">
+					<div class="col-lg-12 padding-top-70 padding-bottom-40">
+
+						<div class="wrapper login-box-layout1">
+							<!--display error/success message-->
+							<div id="message">
+							</div>
+
+
+
+
+							<form action="{% url 'registration' %}" method="post" class="login-form">
+								{% csrf_token %}
+								{{ form.as_p }}
+
+								<!-- <h3>Don&#039;t have an account? Create one now.</h3>
+
+								<div class="row">
+									<div class="col-md-6">
+										<label class="mb-3">First Name</label>
+										<input required type="text" value="" class="input main-input-box"
+											name="first_name" id="first_name" />
+									</div>
+									<div class="col-md-6">
+										<label class="mb-3">Last Name</label>
+										<input required type="text" value="" class="input main-input-box"
+											name="last_name" id="last_name" />
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-6">
+										<label class="mb-3">Email</label>
+										<input required type="email" value="" class="input main-input-box" name="email"
+											id="email" />
+									</div>
+									<div class="col-md-6">
+										<label class="mb-3">Username</label>
+										<input required type="text" value="" class="input main-input-box"
+											name="username" id="username" />
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-6">
+										<label class="mb-3">Password</label>
+										<input required type="password" value="" class="input main-input-box"
+											name="password1" id="password1" />
+									</div>
+									<div class="col-md-6">
+										<label class="mb-3">Password again</label>
+										<input required type="password" value="" class="input main-input-box"
+											name="password2" id="password2" />
+										<span class="password-no-match">Password does not match</span>
+										<span class="password-match">Password Match</span>
+									</div>
+
+								</div> -->
+
+								<div class="btn-area">
+									<button type="submit" name="btnregister"
+										class="btn-fill registration-but btn-primary button-primary button">
+										Submit </button>
+									<input type="hidden" name="task" value="register" />
+								</div>
+							</form>
+
+
+
+
+
+
+
+
+
+
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--#content-->
+
+		{% endblock %}

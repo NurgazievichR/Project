@@ -1,0 +1,112 @@
+{% extends 'include/base.html' %}
+{% block content %}
+
+
+
+		<div id="content" class="site-content">
+
+			{% include 'include/entry_banner.html'   %}
+
+			<div id="primary" class="content-area">
+				<div class="container">
+					<div class="row gutters-60">
+						<div class="col-lg-8 col-md-12 col-12">
+							<main id="main" class="site-main" >
+								<div class="product-box-layout1 post-grid-default post-grid-style1">
+									<div class="row">
+
+
+										
+
+										{% for p in cat.children.all %}
+										{% if forloop.counter < 11 %}
+											
+											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+											<div class="recipe-blog post-798 ranna_recipe type-ranna_recipe status-publish has-post-thumbnail hentry ranna_recipe_category-breakfast ranna_recipe_ingredient-lamb ranna_recipe_ingredient-onion ranna_recipe_ingredient-potato ranna_recipe_ingredient-turkey ranna_recipe_cuisine-italian ranna_recipe_cuisine-thai rn_recipe_tag-cake rn_recipe_tag-dinner rn_recipe_tag-salad"
+												id="post-798">
+
+												<div class="rtin-single-post">
+													<div class="rtin-img">
+														<a
+															href="{% url 'product_view' p.url %}">
+															<img style=" height:308px; object-fit:cover;" 
+															{% if p.image %}
+															src="{{ p.image.url }}"
+															{% else %}
+															src="https://radiustheme.com/demo/wordpress/themes/ranna/wp-content/uploads/2019/09/ranna-wordpress-theme-radiustheme.com-4-630x517.jpg"			
+																
+															{% endif %}
+																class="attachment-ranna-size7 size-ranna-size7 wp-post-image"
+																alt="" /> </a>
+													</div>
+													<div class="item-content rtin-content">
+														<span class="sub-title"><a
+																href="{% url 'category_view' p.category.url %}"
+																rel="tag">{{p.category}}</a></span>
+														<h3 class="item-title"><a
+																href="{% url 'product_view' p.url %}">
+																{{p.title}}</a></h3>
+														<div>
+															<ul class="avg item-rating">
+																<li class="single-item star-empty"><i
+																		class="fa fa-star"></i></li>
+																<li class="single-item star-empty"><i
+																		class="fa fa-star"></i></li>
+																<li class="single-item star-empty"><i
+																		class="fa fa-star"></i></li>
+																<li class="single-item star-empty"><i
+																		class="fa fa-star"></i></li>
+																<li class="single-item star-empty"><i
+																		class="fa fa-star"></i></li>
+																<li><span>0<span> / 5</span></span> </li>
+															</ul>
+														</div>
+														<p>{{p.description | truncatewords:20 | safe}}</p>
+														<ul class="entry-meta">
+															<li><a href="#"><i class="fa fa-clock-o"></i>{{p.cook_time}} Mins</a>
+															</li>
+															<li><i class="fa fa-user" aria-hidden="true"></i></li>
+															<li class="single-meta"><a href="#" data-toggle="modal"
+																	data-target="#rt-like-check798"
+																	class="like-recipe not-looged-in"><i
+																		class="fa fa-heart-o"></i><span>5</span>
+																	Like</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										{% endif %}
+
+										{% endfor %}
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+
+
+
+									</div>
+								</div>
+							</main>
+						</div>
+						<div  class="col-lg-4 col-md-12 col-12">
+
+						{% include 'include/sidebar.html'   %}
+</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--#content-->
+
+
+	{% endblock %}

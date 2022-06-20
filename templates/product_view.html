@@ -1,0 +1,385 @@
+
+{% extends 'include/base.html' %}
+{% block content %}
+
+
+
+<div id="content" class="site-content">
+		{% include 'include/entry_banner.html'   %}
+
+			<div id="primary" class="content-area">
+				<div class="container">
+					<div class="row gutters-60">
+						<div class="col-lg-8 col-md-12 col-12 2sidebar">
+							<main id="main" class="site-main section-to-print">
+								<div id="post-769"
+									class="single-recipe-layout1 post-769 ranna_recipe type-ranna_recipe status-publish has-post-thumbnail hentry ranna_recipe_category-salad ranna_recipe_ingredient-lamb ranna_recipe_ingredient-onion ranna_recipe_ingredient-potato ranna_recipe_ingredient-turkey ranna_recipe_cuisine-italian ranna_recipe_cuisine-japanese ranna_recipe_cuisine-thai rn_recipe_tag-dinner rn_recipe_tag-night rn_recipe_tag-salad">
+									<div class="row mb-4">
+										<div class="col-xl-9 col-md-9 col-12 entry-metas">
+											<ul class="entry-meta">
+												<li class="single-meta"><i class="fa fa-calendar"
+														aria-hidden="true"></i><span>{{ product.date | date:"M d, Y" }}</span></li>
+												<li class="single-meta"><i class="fa fa-user" aria-hidden="true"></i>by
+												</li>
+												<li class="single-meta"><a href="#" data-toggle="modal"
+														data-target="#rt-like-check769"
+														class="like-recipe not-looged-in"><i
+															class="fa fa-heart-o"></i><span>4</span> Like</a></li>
+												<li class="single-meta">
+													<ul class="avg item-rating">
+														<li class="single-item star-empty"><i class="fa fa-star"></i>
+														</li>
+														<li class="single-item star-empty"><i class="fa fa-star"></i>
+														</li>
+														<li class="single-item star-empty"><i class="fa fa-star"></i>
+														</li>
+														<li class="single-item star-empty"><i class="fa fa-star"></i>
+														</li>
+														<li class="single-item star-empty"><i class="fa fa-star"></i>
+														</li>
+														<li><span>0<span> / 5</span></span> </li>
+													</ul>
+												</li>
+											</ul>
+											<ul class="entry-meta">
+												<li class="single-meta category-meta"><i class="fa fa-tags"
+														aria-hidden="true"></i>
+													<ul class="recipe-categories">
+														<li class="ctg-name"><a
+																href="https://radiustheme.com/demo/wordpress/themes/ranna/ranna_recipe_category/salad/"
+																rel="tag">{{product.category}}</a></li>
+													</ul>
+												</li>
+												<li class="single-meta"><i class="fa fa-book"
+														aria-hidden="true"></i>Cuisine: <span class="recipe-cuisine"><span
+															href="#"
+															rel="tag">{{product.cuisine}}</span>, </span></li>
+												<li class="single-meta category-meta"><i class="fa fa-signal"
+														aria-hidden="true"></i>Difficulty: {{product.difficulty}}</li>
+											</ul>
+										</div>
+										<div class="col-xl-3 col-md-3 col-12">
+											<ul class="action-item">
+												<li><button class="print-share-button" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer-fill" viewBox="0 0 16 16">
+													<path d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z"/>
+													<path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2V7zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+												  </svg></button></li>
+												<li><button data-toggle="modal" data-target="#fsModal"><i
+															class="fa fa-arrows-alt" aria-hidden="true"></i></button>
+												</li>
+												
+											</ul>
+										</div>
+									</div>
+									<div class="item-figure"><img width="1920" height="1080"
+											src="{{ product.image.url }}"
+											class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""
+										
+											sizes="(max-width: 1920px) 100vw, 1920px" /></div>
+									<div class="item-feature">
+										<ul>
+											<li class="active-4">
+												<div class="feature-wrap">
+													<div class="media">
+														<div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
+															<path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z"/>
+															<path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
+														  </svg></div>
+														<div class="media-body space-sm">
+															<div class="feature-title">Prep Time</div>
+															<div class="feature-sub-title">20 Mins</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="active-4">
+												<div class="feature-wrap">
+													<div class="media">
+														<div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+															<path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+															<path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+															<path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+														  </svg>
+														  </div>
+														<div class="media-body space-sm">
+															<div class="feature-title">Cook Time</div>
+															<div class="feature-sub-title">55 Mins</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="active-4">
+												<div class="feature-wrap">
+													<div class="media">
+														<div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+															<path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+															<path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+															<path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+														  </svg></div>
+														<div class="media-body space-sm">
+															<div class="feature-title">Serving</div>
+															<div class="feature-sub-title">4</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="active-4">
+												<div class="feature-wrap">
+													<div class="media">
+														<div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+															<path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+															<path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+														  </svg></div>
+														<div class="media-body space-sm">
+															<div class="feature-title">View</div>
+															<div class="feature-sub-title"><span
+																	class="meta-views meta-item high"><i
+																		class="fa fa-eye" aria-hidden="true"></i> 423
+																</span> </div>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+
+									<div class="item-description">
+										<div data-elementor-type="wp-post" data-elementor-id="769"
+											class="elementor elementor-769">
+											<div class="elementor-inner">
+												<div class="elementor-section-wrap">
+													<section
+														class="elementor-section elementor-top-section elementor-element elementor-element-31254013 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+														data-id="31254013" data-element_type="section">
+														<div class="elementor-container elementor-column-gap-default">
+															<div class="elementor-row">
+																<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2d687fe0"
+																	data-id="2d687fe0" data-element_type="column">
+																	<div
+																		class="elementor-column-wrap elementor-element-populated">
+																		<div class="elementor-widget-wrap">
+																			<div class="elementor-element elementor-element-686112b7 elementor-widget elementor-widget-text-editor"
+																				data-id="686112b7"
+																				data-element_type="widget"
+																				data-widget_type="text-editor.default">
+																				<div class="elementor-widget-container">
+																					<div
+																						class="elementor-text-editor elementor-clearfix">
+																					{{product.description | safe}}
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-12 col-12">
+											<div class="nutrition-wrap">
+												<h3 class="item-title"><i class="fa fa-info"></i>Recipe</h3>
+																<ul class="nutrition-list">
+																	
+													<li class="nutrition-value-title"><span>Ingredients*</span></li>
+													{% for r in lst %}
+														
+																		<li>
+														<div class="nutrition-name">{{r}}</div>											</li>
+													{% endfor %}
+																		
+													</ul>
+											</div>
+										</div>
+
+
+										
+
+									</div>
+
+									<ul class="rn-notes"></ul>
+									<div class="direction-wrap-layout1">
+										<div class="section-heading heading-dark">
+											<h2 class="item-heading">Directions</h2>
+										</div>
+										<p class="section-paragraph">You can make the {{product.title}} at home. The homemade
+											version of your favourite {{product.title}}! You'll need only{% for r in lst %}{{r}}, {% endfor %}
+										</p>
+										<div class="row">
+											<div class="col-lg-2">
+												<div class="serial-number">
+													Step 1 </div>
+												<div class="verticle-line"></div>
+											</div>
+											<div class="col-lg-10">
+												<div class="direction-box-layout1">
+													<div class="item-figure">
+														<img width="1240" height="578"
+															src="{{ product.step_one_photo.url }}"
+															class="img-responsive" alt="" loading="lazy" />
+													</div>
+													<div class="item-content">
+														<p>{{ product.step_one }}</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-2">
+												<div class="serial-number">
+													Step 2 </div>
+												<div class="verticle-line"></div>
+											</div>
+											<div class="col-lg-10">
+												<div class="direction-box-layout1">
+													<div class="item-figure">
+														<img width="1240" height="578"
+															src="{{ product.step_two_photo.url }}"
+															class="img-responsive" alt="" loading="lazy" />
+													</div>
+													<div class="item-content">
+														<p>{{ product.step_two }}</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-2">
+												<div class="serial-number">
+													Step 3 </div>
+												<div class="verticle-line"></div>
+											</div>
+											<div class="col-lg-10">
+												<div class="direction-box-layout1">
+													<div class="item-figure">
+														<img width="1240" height="578"
+															src="{{ product.step_three_photo.url }}"
+															class="img-responsive" alt="" loading="lazy" />
+													</div>
+													<div class="item-content">
+														<p>{{ product.step_three }}</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										{% if product.step_four and product.step_four_photo %}				<div class="row">
+											<div class="col-lg-2">
+												<div class="serial-number">
+													Step 4 </div>
+												<div class="verticle-line"></div>
+											</div>
+											<div class="col-lg-10">
+												<div class="direction-box-layout1">
+													<div class="item-figure">
+														<img width="1240" height="578"
+															src="{{ product.step_four_photo.url }}"
+															class="img-responsive" alt="" loading="lazy" />
+													</div>
+													<div class="item-content">
+														<p>{{ product.step_four }}</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										{% endif %}
+
+										{% if product.step_five and product.step_five_photo %}				<div class="row">
+											<div class="col-lg-2">
+												<div class="serial-number">
+													Step 4 </div>
+												<div class="verticle-line"></div>
+											</div>
+											<div class="col-lg-10">
+												<div class="direction-box-layout1">
+													<div class="item-figure">
+														<img width="1240" height="578"
+															src="{{ product.step_five_photo.url }}"
+															class="img-responsive" alt="" loading="lazy" />
+													</div>
+													<div class="item-content">
+														<p>{{ product.step_five }}</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										{% endif %}
+
+
+										
+									</div>
+									<div class="tag-share">
+										<ul>
+											<li>
+												<ul class="inner-tag">
+													{% for tag in product.tag.all %}
+														
+													<li><a
+															href="{% url 'tag_view' tag.url %}">{{tag}}</a>
+													</li>
+													{% endfor %}
+													
+												</ul>
+											</li>
+											<li>
+												<ul class="inner-share bottom-share">
+													<li class="action-share-hover">
+														<div class="action-share-wrap">
+															<a href="http://www.facebook.com/sharer.php?u=https://radiustheme.com/demo/wordpress/themes/ranna/recipe/lemon-dijon-vina-igrette-kale-quinoa-and-avocado-salad-with/"
+																rel="external" target="_blank"
+																class="facebook-share-button large-share-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+																	<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+																  </svg> <span
+																	class="social-text">Facebook</span></a><a
+																href="https://twitter.com/intent/tweet?text=Lemon+Dijon+Vina+igrette+Kale+Quinoa%2C+and+Avocado+Salad+with&#038;url=https://radiustheme.com/demo/wordpress/themes/ranna/recipe/lemon-dijon-vina-igrette-kale-quinoa-and-avocado-salad-with/"
+																rel="external" target="_blank"
+																class="twitter-share-button large-share-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+																	<path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+																  </svg>	 <span
+																	class="social-text">Twitter</span></a><a
+																href="https://plusone.google.com/_/+1/confirm?hl=en&#038;url=https://radiustheme.com/demo/wordpress/themes/ranna/recipe/lemon-dijon-vina-igrette-kale-quinoa-and-avocado-salad-with/&#038;name=Lemon+Dijon+Vina+igrette+Kale+Quinoa%2C+and+Avocado+Salad+with"
+																rel="external" target="_blank"
+																class="google-share-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+																	<path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+																  </svg> <span
+																	class="screen-reader-text">Google+</span></a><a
+																href="http://www.linkedin.com/shareArticle?mini=true&#038;url=https://radiustheme.com/demo/wordpress/themes/ranna/recipe/lemon-dijon-vina-igrette-kale-quinoa-and-avocado-salad-with/&#038;title=Lemon+Dijon+Vina+igrette+Kale+Quinoa%2C+and+Avocado+Salad+with"
+																rel="external" target="_blank"
+																class="linkedin-share-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+																	<path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+																  </svg> <span
+																	class="screen-reader-text">LinkedIn</span></a><a
+																href="http://pinterest.com/pin/create/button/?url=https://radiustheme.com/demo/wordpress/themes/ranna/recipe/lemon-dijon-vina-igrette-kale-quinoa-and-avocado-salad-with/&#038;description=Lemon+Dijon+Vina+igrette+Kale+Quinoa%2C+and+Avocado+Salad+with&#038;media=https://radiustheme.com/demo/wordpress/themes/ranna/wp-content/uploads/2019/09/blog4-1240x578.jpg"
+																rel="external" target="_blank"
+																class="pinterest-share-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+																	<path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z"/>
+																  </svg> <span
+																	class="screen-reader-text">Pinterest</span></a>
+														</div>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+									<!-- author bio -->
+
+							</main>
+						</div>
+						<div class="col-lg-4 col-md-12">
+							{% include 'include/sidebar.html'   %}
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--#content-->
+
+		
+	
+	{% endblock %}
