@@ -1,14 +1,13 @@
     <aside class="sidebar-widget-area">
 {% if title != 'Главная страница' %}
 <div id="search-7" class="widget widget_search">
-    <form role="search" method="get" class="search-form"
-        action="https://radiustheme.com/demo/wordpress/themes/ranna/">
+    <form role="search" method="get" class="search-form">
         <div class="row custom-search-input">
             <div class="input-group col-md-12">
                 <input type="text" class="search-query form-control"
-                    placeholder="Search here ..." value="" name="s" />
+                    placeholder="Search here ..." value="" name="search_word" />
                 <span class="input-group-btn">
-                    <button class="btn" type="submit">
+                    <button name="search-button" class="btn" type="submit">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </button>
                 </span>

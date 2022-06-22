@@ -1,0 +1,76 @@
+{% extends 'include/base.html' %}
+
+{% block content %}
+
+
+<div id="content" class="site-content">
+    {% include 'include/entry_banner.html' %}
+    <div id="primary" class="content-area">
+        <div class="container">
+            <div class="row gutters-60">
+                <div class="col-lg-8 col-md-12 col-12">
+                    <main id="main" class="site-main">
+                        <div class="rt-masonry-grid rt-search-post">
+
+                            {% for p in products %}
+                                
+<div id="post-2425"
+    class="col-lg-6 col-md-6 col-sm-6 col-12 rt-grid-item blog-layout-1 post-2425 ranna_recipe type-ranna_recipe status-publish has-post-thumbnail hentry ranna_recipe_category-salad ranna_recipe_ingredient-lamb ranna_recipe_ingredient-onion ranna_recipe_ingredient-potato ranna_recipe_ingredient-turkey ranna_recipe_cuisine-italian rn_recipe_tag-dinner rn_recipe_tag-night rn_recipe_tag-salad">
+    <div class="blog-box">
+        <div>
+            <img style="height: 240px; object-fit:cover;" width="630" height="650"
+                src="{{ p.image.url }}"
+                class="attachment-ranna-size14 size-ranna-size14 wp-post-image" alt="" />
+        </div>
+        <div class="entry-content">
+            <ul>
+                <li><i class="fa fa-user" aria-hidden="true"></i></li>
+                <li><i class="fa fa-calendar-o" aria-hidden="true"></i>{{ p.date | date:"M d, Y" }}</li>
+            </ul>
+            <h3><a
+                    href="{% url 'product_view' p.url %}">
+                    {{p.title |  truncatewords:4}}</a></h3>
+            <div class="blog-text">
+                <p>{{p.description | truncatewords:9| safe}}</p>
+            </div>
+            <a class="blog-post-button"
+                href="{% url 'product_view' p.url %}"><span>Continue
+                    Reading</span><i class="flaticon-next"></i></a>
+        </div>
+    </div>
+</div>
+
+                            {% endfor %}
+
+  
+                            
+                        </div>
+
+                        <div class="pagination-area">
+                            <ul>
+                                <li class="active"><a
+                                        href="https://radiustheme.com/demo/wordpress/themes/ranna/?s=salad">1</a></li>
+                                <li><a href="https://radiustheme.com/demo/wordpress/themes/ranna/page/2/?s=salad">2</a>
+                                </li>
+                                <li><a href="https://radiustheme.com/demo/wordpress/themes/ranna/page/3/?s=salad">3</a>
+                                </li>
+                                <li class="pr-1">...</li>
+                                <li><a href="https://radiustheme.com/demo/wordpress/themes/ranna/page/6/?s=salad">6</a>
+                                </li>
+                                <li><a href="https://radiustheme.com/demo/wordpress/themes/ranna/page/2/?s=salad"><i
+                                            class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </main>
+                </div>
+
+                <div class="col-lg-4 col-md-12 col-12">
+                    {% include 'include/sidebar.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--#content-->
+
+{% endblock %}

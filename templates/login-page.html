@@ -13,7 +13,16 @@
 								<h2 class="item-heading">Login Form</h2>
 							</div>
 							<form class="login-form" name="loginform" method="post">
-								<div class="row">
+								{% csrf_token %}
+								{{ form.as_p }}
+
+
+								
+								
+								
+								
+								
+								<!-- <div class="row">
 									<div class="col-md-6">
 										<label class="mb-3">Username</label>
 										<input type="text" name="userName" id="user_login" class="input main-input-box"
@@ -38,7 +47,9 @@
 												title="Lost Password">Lost your password?</a>
 										</label>
 									</div>
-								</div>
+								</div> -->
+
+
 								<div class="btn-area">
 
 									<input type="hidden" name="login_Sbumit">
@@ -52,13 +63,17 @@
 										an Account<i class="flaticon-next"></i></a>
 
 								</div>
+
+
+
+
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!--#content-->
+		#content
 
 		
 	{% endblock %}

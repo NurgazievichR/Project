@@ -19,7 +19,7 @@ from django.urls import path
 from django.conf.urls.static import static
 
 from dishes.views import *
-from user.views import RegisterUser
+from user.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,8 +29,9 @@ urlpatterns = [
     path('tag/<slug:slug>', tag_view, name='tag_view'),
     path('product/<slug:slug>', product_view, name='product_view'),
     path('about/', about,  name='about'),
-    # path('login/', login, name='login'),
+    path('login/', LoginUser.as_view(), name='login'),
     path('registration/', RegisterUser.as_view(), name='registration'),
+
 
 ]
 
